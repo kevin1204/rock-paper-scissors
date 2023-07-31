@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let values = ['rock', 'paper', 'scissors'];
+        let computerSelection = 0;
+        let playerSelection = 0;
+
+        function getComputerSelection(){
+            computerSelection = values[Math.floor(Math.random()*3)];
+            return computerSelection;
+
+        }
+
+        getComputerSelection();
+        playerSelection = prompt("Welcome to Rock, Paper, Scissors Game!!\nPlease enter your value: ").toLowerCase();
+
+        function playRound(computerSelection, playerSelection) {
+            if(computerSelection == 'rock' && playerSelection == 'rock'){
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('Game is tie!')
+            } else if(computerSelection == 'rock' && playerSelection == 'paper') {
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('You win! You beat the computer!');
+            } else if(computerSelection == 'rock' && playerSelection == 'scissors') {
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('You lost! :(');
+            } else if(computerSelection == 'paper' && playerSelection == 'rock'){
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('You lost! :(')
+            } else if(computerSelection == 'paper' && playerSelection == 'paper') {
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('Game is tie!');
+            } else if(computerSelection == 'paper' && playerSelection == 'scissors') {
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('You win! You beat the computer! :)');
+            } else if(computerSelection == 'scissors' && playerSelection == 'rock'){
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('You win! You beat the computer! :)')
+            } else if(computerSelection == 'scissors' && playerSelection == 'paper') {
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('You lost! :(');
+            } else if(computerSelection == 'scissors' && playerSelection == 'scissors') {
+                console.log('Computer Selection is:'+computerSelection);
+                console.log('Player Selection is:'+playerSelection);
+                console.log('Game is tie!');
+            }
+        }
+
+        playRound(computerSelection, playerSelection);
+        
+
+    </script>
+</body>
+</html>
